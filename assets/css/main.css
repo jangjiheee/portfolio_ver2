@@ -154,24 +154,65 @@ header .__main .__main_greet .__greet_img {
   width: 50%;
 }
 
-.__section_wrap .__section.__do {
+.__section_wrap section.__do {
   padding: 200px 0;
 }
-.__section_wrap .__section.__do h3 {
+.__section_wrap section.__do h3 {
   margin-bottom: 170px;
 }
-.__section_wrap .__section.__do .__do_cont {
+.__section_wrap section.__do .__do_cont {
   display: flex;
 }
-.__section_wrap .__section.__project {
+.__section_wrap section.__project {
   position: relative;
+  height: 1080px;
 }
-.__section_wrap .__section.__project::before {
+.__section_wrap section.__project::before {
   position: absolute;
   content: "";
   top: 0;
   left: 0;
   width: 50%;
   height: 1080px;
-  background-color: #F8E6E0;
+  background: #F8E6E0;
+}
+.__section_wrap section.__project .__cont_wrap {
+  max-height: 1080px;
+}
+.__section_wrap section.__project .__cont_wrap .__cont_list {
+  display: flex;
+  justify-content: space-between;
+  max-height: 1080px;
+}
+.__section_wrap section.__project .__cont_wrap .__cont_list .__list {
+  width: 50%;
+  z-index: 0;
+  padding-top: 100px;
+}
+.__section_wrap section.__project .__cont_wrap .__cont_list .__list .__project {
+  text-align: center;
+}
+.__section_wrap section.__project .__cont_wrap .__cont_list .__cont_report {
+  width: calc(50% - 74px);
+  padding-top: 100px;
+  overflow-y: scroll;
+}
+.__section_wrap section.__project .__cont_wrap .__cont_list .__cont_report ul li h4 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 33px;
+  position: relative;
+}
+.__section_wrap section.__project .__cont_wrap .__cont_list .__cont_report ul li h4::before {
+  position: absolute;
+  content: "";
+  bottom: -16px;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #333;
+}
+.__section_wrap section.__project .__cont_wrap .__cont_list .__cont_report ul li h4 span {
+  font-weight: 400;
 }/*# sourceMappingURL=main.css.map */

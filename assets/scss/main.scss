@@ -89,7 +89,7 @@ header {
 }
 
 .__section_wrap {
-    .__section {
+    section {
         &.__do {
             padding: 200px 0;
             h3 {
@@ -101,6 +101,7 @@ header {
         }
         &.__project {
             position: relative;
+            height: 1080px;
             &::before {
                 position: absolute;
                 content: "";
@@ -108,8 +109,51 @@ header {
                 left: 0;
                 width: 50%;
                 height: 1080px;
-                background-color: $color-pink;
-                // z-index: -1;
+                background: $color-pink;
+            }
+            .__cont_wrap {
+                max-height: 1080px;
+                .__cont_list {
+                    display: flex;
+                    justify-content: space-between;
+                    max-height: 1080px;
+                    .__list {
+                        width: 50%;
+                        z-index: 0;
+                        padding-top: 100px;
+                        .__project {
+                            text-align: center;
+                        }
+                    }
+                    .__cont_report {
+                        width: calc(50% - 74px);
+                        padding-top: 100px;
+                        overflow-y: scroll;
+                        ul {
+                            li {
+                                h4 {
+                                    font-size: 2rem;
+                                    text-align: center;
+                                    font-weight: 700;
+                                    margin-bottom: 33px;
+                                    position: relative;
+                                    &::before {
+                                        position: absolute;
+                                        content: "";
+                                        bottom: -16px;
+                                        left: 0;
+                                        height: 4px;
+                                        width: 100%;
+                                        background-color: $color-black;
+                                    }
+                                    span {
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+                    } 
+                }
             }
         }
     }
