@@ -3,15 +3,114 @@
 .__wrapper {
     color: $color-black;
     background-color: $color-bg;
+    font-size: 10px;
+    font-weight: 400;
+    span.__double_dot {
+        position: relative;
+        &:before {
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: $color-black;
+            top: 0;
+            left: calc(50% - 8px);
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: $color-black;
+            top: 0;
+            left: calc(50% + 8px);
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+    }
 }
 
-header .__logo_box {
-    display: flex;
-    align-items: center;
+header {
+    background-color: $color-pink;
+    height: 100vh;
+    .__header {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        .__logo_box {
+            color: $color-orange;
+            font-size: 1.4rem;
+        }
+    }
+
+    .__mode_select {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .__main {
+        height: calc(100vh - 80px);
+        .__main_greet {
+            display: flex;
+            height: 100%;
+            .__greet_txt {
+                width: 50%;
+                text-align: right;
+                padding-top: 200px;
+                .__greet {
+                    font-size: 3.6rem;
+                    font-weight: 500;
+                    margin-bottom: 40px;
+                }
+                .__name {
+                    font-size: 7.2rem;
+                    margin-bottom: 40px;
+                    font-weight: 700;
+                    span {
+                        display: block;
+                        margin-top: 20px;
+                        font-size: 2.0rem;
+                        font-weight: 400;
+                    }
+                    & + p {
+                        font-size: 1.6rem;
+                        line-height: 1.2;
+                    }
+                }
+            }
+            .__greet_img {
+                width: 50%;
+            }
+        }
+    }
 }
 
-header .__mode_select {
-    position: absolute;
-    top: 0;
-    right: 0;
+.__section_wrap {
+    .__section {
+        &.__do {
+            padding: 200px 0;
+            h3 {
+                margin-bottom: 170px;
+            }
+            .__do_cont {
+                display: flex;
+            }
+        }
+        &.__project {
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 1080px;
+                background-color: $color-pink;
+                // z-index: -1;
+            }
+        }
+    }
 }
