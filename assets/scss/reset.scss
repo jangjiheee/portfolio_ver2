@@ -3,8 +3,11 @@
 html, body {
     margin: 0;
     padding: 0;
-    color: $color-black;
-    background-color: $color-bg;
+}
+
+.__inner_wrapper {
+    max-width: 1460px;
+    margin: 0 auto;
 }
 
 /* HTML5 display-role reset for older browsers */

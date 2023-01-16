@@ -1,8 +1,11 @@
 html, body {
   margin: 0;
   padding: 0;
-  color: #333;
-  background-color: #f9f9f9;
+}
+
+.__inner_wrapper {
+  max-width: 1460px;
+  margin: 0 auto;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -37,4 +40,20 @@ table {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.__wrapper {
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+header .__logo_box {
+  display: flex;
+  align-items: center;
+}
+
+header .__mode_select {
+  position: absolute;
+  top: 0;
+  right: 0;
 }/*# sourceMappingURL=main.css.map */

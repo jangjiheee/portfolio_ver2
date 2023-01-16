@@ -1,1 +1,17 @@
 @import "../../assets/scss/reset.scss";
+
+.__wrapper {
+    color: $color-black;
+    background-color: $color-bg;
+}
+
+header .__logo_box {
+    display: flex;
+    align-items: center;
+}
+
+header .__mode_select {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
