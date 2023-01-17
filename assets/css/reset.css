@@ -50,11 +50,20 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Noto Sans", sans-serif;
+  height: 100%;
+  color: #333;
+  background-color: #f9f9f9;
+  font-weight: 400;
 }
 
 .__inner_wrapper {

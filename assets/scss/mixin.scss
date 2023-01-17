@@ -1,0 +1,28 @@
+@mixin dot {
+    span.__double_dot {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: $color-black;
+            top: 0;
+            left: calc(50% - 8px);
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: $color-black;
+            top: 0;
+            left: calc(50% + 8px);
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+    }
+}
+

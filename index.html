@@ -8,265 +8,417 @@
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-    <div class="__wrapper">
-        <header>
-            <div class="__header __inner_wrapper">
-                <div class="__logo_box">
-                    <h1>LOGO</h1>
-                </div>
+    <header>
+        <div class="__header __inner_wrapper">
+            <div class="__logo_box">
+                <h1>LOGO</h1>
             </div>
-            <div class="__mode_select">
-                <div class="__day">
-                    <img src="./assets/images/day.png" alt="daymode sun image">
-                </div>
+        </div>
+        <div class="__mode_select">
+            <div class="__day">
+                <img src="./assets/images/day.png" alt="daymode sun image">
             </div>
-            <div class="__main __inner_wrapper" role="main">
-                <div class="__main_greet">
-                    <div class="__greet_txt">
-                        <p class="__greet">Hello I’M</p>
-                        <h2 class="__name">JANG JIHEE
-                            <span>Web publisher</span>
-                        </h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div class="__main __inner_wrapper" role="main">
+            <div class="__main_greet">
+                <div class="__greet_txt">
+                    <p class="__greet">Hello I’M</p>
+                    <h2 class="__name">JANG JIHEE
+                        <span>Web publisher</span>
+                    </h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="__greet_img"></div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- <section class="__do" id="trigger1">
+        <div class="__inner_wrapper">
+            <h3>What Do I Do?</h3>
+            <div class="__do_cont">
+                <div class="__cont_box">
+                    <div class="__cont_img icon">
+                        <figure>
+                            <picture>
+                                <img src="./assets/images/communication.png" alt="communication icon">
+                            </picture>
+                        </figure>
                     </div>
-                    <div class="__greet_img"></div>
+                    <div class="__cont_txt">
+                        <div class="__cont_tit">COMMUNICATION</div>
+                        <div class="__cont_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                    </div>
+                </div>
+                <div class="__cont_box">
+                    <div class="__cont_img icon">
+                        <figure>
+                            <picture>
+                                <img src="./assets/images/development.png" alt="development icon">
+                            </picture>
+                        </figure>
+                    </div>
+                    <div class="__cont_txt">
+                        <div class="__cont_tit">DEVELOPMENT</div>
+                        <div class="__cont_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                    </div>
+                </div>
+                <div class="__cont_box">
+                    <div class="__cont_img icon">
+                        <figure>
+                            <picture>
+                                <img src="./assets/images/skill.png" alt="skill icon">
+                            </picture>
+                        </figure>
+                    </div>
+                    <div class="__cont_txt">
+                        <div class="__cont_tit">SKILL</div>
+                        <div class="__cont_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                    </div>
+                </div>
+                <div class="__cont_box">
+                    <div class="__cont_img icon">
+                        <figure>
+                            <picture>
+                                <img src="./assets/images/creative.png" alt="creative icon">
+                            </picture>
+                        </figure>
+                    </div>
+                    <div class="__cont_txt">
+                        <div class="__cont_tit">CREATIVE</div>
+                        <div class="__cont_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                    </div>
                 </div>
             </div>
-        </header>
+        </div>
         
-        <div class="__section_wrap">
-            <section class="__section __do">
-                <div class="__inner_wrapper">
-                    <h3>What Do I Do?</h3>
-                    <div class="__do_cont">
-                        <div class="__cont_box">
-                            <div class="__cont_img">
+    </section> -->
+
+    <section class="__do" id="js-wrapper">
+        <h3 class="__fit_title">What <span class="__double_dot">D</span>o I Do?</h3>
+        <div class="sections" id="js-slideContainer">
+          <section class="section">
+            <div class="__text_position">
+                <div class="__cont_img icon">
+                    <figure>
+                        <picture>
+                            <img src="./assets/images/communication.png" alt="communication icon">
+                        </picture>
+                    </figure>
+                </div>
+                <div class="__cont_txt" id="title1">
+                    <div class="__cont_tit">COMMUNICATION</div>
+                    <div class="__cont_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                </div>
+                <span id="trigger--title1"></span>
+            </div>
+          </section>
+          <section class="section">
+            <div class="__text_position">
+                <div class="__cont_img icon">
+                    <figure>
+                        <picture>
+                            <img src="./assets/images/development.png" alt="development icon">
+                        </picture>
+                    </figure>
+                </div>
+                <div class="__cont_txt" id="title2">
+                    <div class="__cont_tit">DEVELOPMENT</div>
+                    <div class="__cont_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                </div>
+                <span id="trigger--title2"></span>
+            </div>
+          </section>
+          <section class="section">
+            <div class="__text_position">
+                <div class="__cont_img icon">
+                    <figure>
+                        <picture>
+                            <img src="./assets/images/skill.png" alt="skill icon">
+                        </picture>
+                    </figure>
+                </div>
+                <div class="__cont_txt" id="title3">
+                    <div class="__cont_tit">SKILL</div>
+                    <div class="__cont_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                </div>
+                <span id="trigger--title3"></span>
+            </div>
+          </section>
+          <section class="section">
+            <div class="__text_position">
+                <div class="__cont_img icon">
+                    <figure>
+                        <picture>
+                            <img src="./assets/images/creative.png" alt="creative icon">
+                        </picture>
+                    </figure>
+                </div>
+                <div class="__cont_txt" id="title4">
+                    <div class="__cont_tit">CREATIVE</div>
+                    <div class="__cont_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                </div>
+                <span id="trigger--title4"></span>
+            </div>
+          </section>
+        </div>
+      </section>
+
+    <section class="__project">
+        <div class="__cont_wrap __inner_wrapper">
+            <div class="__cont_list">
+                <div class="__list">
+                    <h3 class="__project_title">PR<span class="__double_dot">O</span>JECT</h3>
+                    <ul>
+                        <li>PROJECT <span>01 _ SAMSUNG SEMICONDUCTOR</span></li>
+                        <li>PROJECT <span>02 _ 롯데백화점</span></li>
+                        <li>PROJECT <span>03 _ 서울시교육청 일자리포털</span></li>
+                        <li>PROJECT <span>04 _ Trulite</span></li>
+                        <li>PROJECT <span>05 _ D1 Tech</span></li>
+                        <li>PROJECT <span>06 _ 부활PNP</span></li>
+                        <li>PROJECT <span>07 _ VVRI NFT</span></li>
+                    </ul>
+                </div>
+                <div class="__cont_report">
+                    <ul class="__report_wrap">
+                        <li class="__report_list">
+                            <h4><span>#1 _</span> SAMSUNG SEMICONDUCTOR</h4>
+                            <p>삼성전자반도체 사이트 고객지원 페이지 퍼블리싱 작업, 메인페이지 뉴스룸 섹션 업데이트 유지보수</p>
+                            <div class="__capacity">
+                                <ul class="__capa_list">
+                                    <li>Duration</li>
+                                    <li>Skill-Set</li>
+                                    <li class="__site">URL</li>
+                                </ul>
+                                <ul class="__capa_cont">
+                                    <li>2022/09 - 2022/10</li>
+                                    <li>Zeplin, Github, SourceTree, Zira, Visual Studio, Gulp</li>
+                                    <li class="__go_site"><a href="https://semiconductor.samsung.com/" target="_blank">https://semiconductor.samsung.com/</a></li>
+                                </ul>
+                            </div>
+                            <div class="__report_img">
                                 <figure>
                                     <picture>
-                                        <img src="./assets/images/communication.png" alt="communication icon">
+                                        <img src="./assets/images/samsung.png" alt="samsung project image">
                                     </picture>
                                 </figure>
                             </div>
-                            <div class="__cont_txt">
-                                <div class="__cont_tit">COMMUNICATION</div>
-                                <div class="__cont_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                        </li>
+                        <li class="__report_list">
+                            <h4><span>#2 _</span> 롯데백화점</h4>
+                            <p>롯데백화점 사이트 리뉴얼 프로젝트 참여 / ESG 서브 페이지 담당</p>
+                            <div class="__capacity"> 
+                                <ul class="__capa_list">
+                                    <li>Duration</li>
+                                    <li>Skill-Set</li>
+                                    <li class="__site">URL</li>
+                                </ul>
+                                <ul class="__capa_cont">
+                                    <li>2023/01 - 2023/01</li>
+                                    <li>Figma, Github, Visual Studio, Gulp</li>
+                                    <!-- <li><a href="javascript:(0)">https://semiconductor.samsung.com/</a></li> -->
+                                </ul>
                             </div>
-                        </div>
-                        <div class="__cont_box">
-                            <div class="__cont_img">
-                                <img src="./assets/images/development.png" alt="development icon">
-                            </div>
-                            <div class="__cont_txt">
-                                <div class="__cont_tit">DEVELOPMENT</div>
-                                <div class="__cont_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
-                            </div>
-                        </div>
-                        <div class="__cont_box">
-                            <div class="__cont_img">
-                                <img src="./assets/images/skill.png" alt="skill icon">
-                            </div>
-                            <div class="__cont_txt">
-                                <div class="__cont_tit">SKILL</div>
-                                <div class="__cont_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
-                            </div>
-                        </div>
-                        <div class="__cont_box">
-                            <div class="__cont_img">
-                                <img src="./assets/images/creative.png" alt="creative icon">
-                            </div>
-                            <div class="__cont_txt">
-                                <div class="__cont_tit">CREATIVE</div>
-                                <div class="__cont_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </section>
-            <section class="__section __project">
-                <div class="__cont_wrap __inner_wrapper">
-                    <div class="__cont_list">
-                        <div class="__list">
-                            <h3 class="__project">PR<span class="__double_dot">O</span>JECT</h3>
-                            <ul>
-                                <li>PROJECT <span>01 _ SAMSUNG SEMICONDUCTOR</span></li>
-                                <li>PROJECT <span>02 _ 롯데백화점</span></li>
-                                <li>PROJECT <span>03 _ 서울시교육청 일자리포털</span></li>
-                                <li>PROJECT <span>04 _ Trulite</span></li>
-                                <li>PROJECT <span>05 _ D1 Tech</span></li>
-                                <li>PROJECT <span>06 _ 부활PNP</span></li>
-                                <li>PROJECT <span>07 _ VVRI NFT</span></li>
-                            </ul>
-                        </div>
-                        <div class="__cont_report">
-                            <ul>
-                                <li>
-                                    <h4><span>#1 _</span> SAMSUNG SEMICONDUCTOR</h4>
-                                    <p>삼성전자반도체 사이트 고객지원 페이지 퍼블리싱 작업, 메인페이지 최신뉴스 부분 업데이트 유지보수</p>
-                                    <div class="__capacity">
-                                        <ul class="__capa_list">
-                                            <li>Duration</li>
-                                            <li>Skill-Set</li>
-                                            <li>URL</li>
-                                        </ul>
-                                        <ul class="__capa_cont">
-                                            <li>2022/09 - 2022/10</li>
-                                            <li>Zeplin, Github, SourceTree, Zira, Visual Studio, Gulp</li>
-                                            <li><a href="jajvascript:(0)">https://semiconductor.samsung.com/</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="__report_img">
-                                        <img src="./assets/images/samsung.png" alt="samsung project image">
-                                    </div>
-                                </li>
-                                <li>
-                                    <h4><span>#2 _</span> 롯데백화점</h4>
-                                    <p>롯데백화점 사이트 리뉴얼 프로젝트 참여 / ESG 서브 페이지 담당</p>
-                                    <div class="__capacity"> 
-                                        <ul class="__capa_list">
-                                            <li>Duration</li>
-                                            <li>Skill-Set</li>
-                                            <li>URL</li>
-                                        </ul>
-                                        <ul class="__capa_cont">
-                                            <li>2023/01 - 2023/01</li>
-                                            <li>Figma, Github, Visual Studio, Gulp</li>
-                                            <!-- <li><a href="jajvascript:(0)">https://semiconductor.samsung.com/</a></li> -->
-                                        </ul>
-                                    </div>
-                                    <div class="__report_img">
+                            <div class="__report_img">
+                                <figure>
+                                    <picture>
                                         <img src="./assets/images/lotte_dep.png" alt="lotte department project image">
-                                    </div>
-                                </li>
-                                <li>
-                                    <h4><span>#3 _</span> 서울시교육청 일자리포털</h4>
-                                    <p>서울시 일자리사이트 구직자 정보, 회원정보, 채용정보관리, 채용공고관리, 지원서 열람기관, 맞춤채용관리,  회원정보수정 작업</p>
-                                    <div class="__capacity">
-                                        <ul class="__capa_list">
-                                            <li>Duration</li>
-                                            <li>Skill-Set</li> 
-                                            <li>URL</li>
-                                        </ul>
-                                        <ul class="__capa_cont">
-                                            <li>2022/12 - 2022/12</li>
-                                            <li>Zeplin, Github, Visual Studio</li>
-                                            <!-- <li><a href="jajvascript:(0)">https://semiconductor.samsung.com/</a></li> -->
-                                        </ul>
-                                    </div>
-                                    <div class="__report_img">
+                                    </picture>
+                                </figure>
+                            </div>
+                        </li>
+                        <li class="__report_list">
+                            <h4><span>#3 _</span> 서울시교육청 일자리포털</h4>
+                            <p>서울시 일자리사이트 구직자 정보, 회원정보, 채용정보관리, 채용공고관리, 지원서 열람기관, 맞춤채용관리,  회원정보수정 작업</p>
+                            <div class="__capacity">
+                                <ul class="__capa_list">
+                                    <li>Duration</li>
+                                    <li>Skill-Set</li> 
+                                    <li class="__site">URL</li>
+                                </ul>
+                                <ul class="__capa_cont">
+                                    <li>2022/12 - 2022/12</li>
+                                    <li>Zeplin, Github, Visual Studio</li>
+                                    <!-- <li><a href="javascript:(0)">https://semiconductor.samsung.com/</a></li> -->
+                                </ul>
+                            </div>
+                            <div class="__report_img">
+                                <figure>
+                                    <picture>
                                         <img src="./assets/images/seoul_edu.png" alt="seoul job seek project image">
-                                    </div>
-                                </li>
-                                <li>
-                                    <h4><span>#4 _</span> TRULITE</h4>
-                                    <p>컨텐츠 제작회사 사이트 제작 / 전체 페이지(main, sub) 퍼블리싱 100%</p>
-                                    <div class="__capacity">
-                                        <ul class="__capa_list">
-                                            <li>Duration</li>
-                                            <li>Skill-Set</li>
-                                            <li>URL</li>
-                                        </ul>
-                                        <ul class="__capa_cont">
-                                            <li>2022/12 - 2022/12</li>
-                                            <li>Figma, Github, Visual Studio, Wordpress</li>
-                                            <li><a href="jajvascript:(0)">http://trulite.io/main/</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="__report_img">
+                                    </picture>
+                                </figure>
+                            </div>
+                        </li>
+                        <li class="__report_list">
+                            <h4><span>#4 _</span> TRULITE</h4>
+                            <p>컨텐츠 제작회사 사이트 제작 / 전체 페이지(main, sub) 퍼블리싱 100%</p>
+                            <div class="__capacity">
+                                <ul class="__capa_list">
+                                    <li>Duration</li>
+                                    <li>Skill-Set</li>
+                                    <li class="__site">URL</li>
+                                </ul>
+                                <ul class="__capa_cont">
+                                    <li>2022/12 - 2022/12</li>
+                                    <li>Figma, Github, Visual Studio, Wordpress</li>
+                                    <li class="__go_site"><a href="http://trulite.io/main/" target="_blank">http://trulite.io/main/</a></li>
+                                </ul>
+                            </div>
+                            <div class="__report_img">
+                                <figure>
+                                    <picture>
                                         <img src="./assets/images/trulite.png" alt="trulite project image">
-                                    </div>
-                                </li>
-                                <li>
-                                    <h4><span>#5 _</span> D1 Tech</h4>
-                                    <p>3D Printing 회사 홈페이지 제작 / 메인 페이지 퍼블리싱 100%, 서브페이지 사업소개 퍼블리싱 100% </p>
-                                    <div class="__capacity">
-                                        <ul class="__capa_list">
-                                            <li>Duration</li>
-                                            <li>Skill-Set</li>
-                                            <li>URL</li>
-                                        </ul>
-                                        <ul class="__capa_cont">
-                                            <li>2022/11 - 2022/12</li>
-                                            <li>Figma, Github, Visual Studio, netlify</li>
-                                            <li><a href="jajvascript:(0)">https://d1tech.netlify.app/</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="__report_img">
+                                    </picture>
+                                </figure>
+                            </div>
+                        </li>
+                        <li class="__report_list">
+                            <h4><span>#5 _</span> D1 Tech</h4>
+                            <p>3D Printing 회사 홈페이지 제작 / 메인 페이지 퍼블리싱 100%, 서브페이지 사업소개 퍼블리싱 100% </p>
+                            <div class="__capacity">
+                                <ul class="__capa_list">
+                                    <li>Duration</li>
+                                    <li>Skill-Set</li>
+                                    <li class="__site">URL</li>
+                                </ul>
+                                <ul class="__capa_cont">
+                                    <li>2022/11 - 2022/12</li>
+                                    <li>Figma, Github, Visual Studio, netlify</li>
+                                    <li class="__go_site"><a href="https://d1tech.netlify.app/" target="_blank">https://d1tech.netlify.app/</a></li>
+                                </ul>
+                            </div>
+                            <div class="__report_img">
+                                <figure>
+                                    <picture>
                                         <img src="./assets/images/d1Tech.png" alt="d1tech project image">
-                                    </div>
-                                </li>
-                                <li>
-                                    <h4><span>#6 _</span> 부활피앤피</h4>
-                                    <p>ESG 회사 홈페이지 제작 / 메인페이지 퍼블리싱 50%, 이야기&문의하기 페이지 퍼블리싱 100%</p>
-                                    <div class="__capacity">
-                                        <ul class="__capa_list">
-                                            <li>Duration</li>
-                                            <li>Skill-Set</li>
-                                            <li>URL</li>
-                                        </ul>
-                                        <ul class="__capa_cont">
-                                            <li>2022/11 - 2022/11</li>
-                                            <li>Figma, Github, Visual Studio, Wordpress</li>
-                                            <li><a href="jajvascript:(0)">https://plasticproject.co.kr/</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="__report_img">
+                                    </picture>
+                                </figure>
+                            </div>
+                        </li>
+                        <li class="__report_list">
+                            <h4><span>#6 _</span> 부활피앤피</h4>
+                            <p>ESG 회사 홈페이지 제작 / 메인페이지 퍼블리싱 50%, 이야기&문의하기 페이지 퍼블리싱 100%</p>
+                            <div class="__capacity">
+                                <ul class="__capa_list">
+                                    <li>Duration</li>
+                                    <li>Skill-Set</li>
+                                    <li class="__site">URL</li>
+                                </ul>
+                                <ul class="__capa_cont">
+                                    <li>2022/11 - 2022/11</li>
+                                    <li>Figma, Github, Visual Studio, Wordpress</li>
+                                    <li class="__go_site"><a href="https://plasticproject.co.kr/" target="_blank">https://plasticproject.co.kr/</a></li>
+                                </ul>
+                            </div>
+                            <div class="__report_img">
+                                <figure>
+                                    <picture>
                                         <img src="./assets/images/pnp.png" alt="부활PNP project image">
-                                    </div>
-                                </li>
-                                <li>
-                                    <h4><span>#7 _</span> VVRI</h4>
-                                    <p>게임 NTF 홈페이지 제작 / 메인 페이지 project 섹션 퍼블리싱 100%</p>
-                                    <div class="__capacity">
-                                        <ul class="__capa_list">
-                                            <li>Duration</li>
-                                            <li>Skill-Set</li>
-                                            <li>URL</li>
-                                        </ul>
-                                        <ul class="__capa_cont">
-                                            <li>2022/11 - 2022/11</li>
-                                            <li>Figma, Github, Visual Studio, Wordpress</li>
-                                            <li><a href="jajvascript:(0)">http://vvri.xyz/</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="__report_img">
+                                    </picture>
+                                </figure>
+                            </div>
+                        </li>
+                        <li class="__report_list">
+                            <h4><span>#7 _</span> VVRI</h4>
+                            <p>게임 NTF 홈페이지 제작 / 메인 페이지 project 섹션 퍼블리싱 100%</p>
+                            <div class="__capacity">
+                                <ul class="__capa_list">
+                                    <li>Duration</li>
+                                    <li>Skill-Set</li>
+                                    <li class="__site">URL</li>
+                                </ul>
+                                <ul class="__capa_cont">
+                                    <li>2022/11 - 2022/11</li>
+                                    <li>Figma, Github, Visual Studio, Wordpress</li>
+                                    <li class="__go_site"><a href="http://vvri.xyz/" target="_blank">http://vvri.xyz/</a></li>
+                                </ul>
+                            </div>
+                            <div class="__report_img">
+                                <figure>
+                                    <picture>
                                         <img src="./assets/images/vvri.png" alt="vvri project image">
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                                    </picture>
+                                </figure>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <!-- <div class="__cont"></div> -->
-            </section>
+            </div>
         </div>
+        <!-- <div class="__cont"></div> -->
+    </section>
 
-        <footer>
-            <div class="__inner_wrapper">
-                <h3>ARE YOU INTE<span class="__double_dot">R</span>ESTED ?</h3>
-                <p>whether you want to say something or have an interesting my project, Please Contact me</p>
-                <div class="__connection_icon">
-                    <p>keep connection</p>
-                    <div class="__icon_wrap">
-                        <div class="__icon_img">
-                            <a href="javascript:(0)">
-                                <img src="./assets/images/mail.png" alt="mail icon">
-                            </a>
-                        </div>
-                        <div class="__icon_img">
-                            <a href="javascript:(0)">
-                                <img src="./assets/images/kakao.png" alt="kakao talk icon">
-                            </a>
-                        </div>
-                        <div class="__icon_img">
-                            <a href="javascript:(0)">
-                                <img src="./assets/images/git.png" alt="git hub icon">
-                            </a>
-                        </div>
+    <footer>
+        <div class="__inner_wrapper">
+            <h3>ARE YOU INTE<span class="__double_dot">R</span>ESTED ?</h3>
+            <p>whether you want to say something or have an interesting my project, Please Contact me</p>
+            <div class="__connection_icon">
+                <p>keep connection</p>
+                <div class="__icon_wrap">
+                    <div class="__icon_img">
+                        <a href="javascript:(0)">
+                            <figure>
+                                <picture>
+                                    <img src="./assets/images/mail.png" alt="mail icon">
+                                </picture>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="__icon_img">
+                        <a href="javascript:(0)">
+                            <figure>
+                                <picture>
+                                    <img src="./assets/images/kakao.png" alt="kakao talk icon">
+                                </picture>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="__icon_img">
+                        <a href="javascript:(0)">
+                            <figure>
+                                <picture>
+                                    <img src="./assets/images/git.png" alt="git hub icon">
+                                </picture>
+                            </figure>
+                        </a>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div> 
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script>
+    $(function () { // wait for document ready
+        var controller = new ScrollMagic.Controller();
+
+        var horizontalSlide = new TimelineMax()
+        // animate panels
+        .to("#js-slideContainer", 1,   {x: "-25%"}) 
+        .to("#js-slideContainer", 1,   {x: "-50%"})
+        .to("#js-slideContainer", 1,   {x: "-75%"})
+        //   .to("#js-slideContainer", 1,   {x: "-80%"})
+
+
+        // create scene to pin and link animation
+        new ScrollMagic.Scene({
+            triggerElement: "#js-wrapper",
+            triggerHook: "onLeave",
+            duration: "400%"
+        })
+            .setPin("#js-wrapper")
+            .setTween(horizontalSlide)
+            //.addIndicators() // add indicators (requires plugin)
+            .addTo(controller);
+        
+        
+        
+        });
+    </script>
 </body>
 </html> 
