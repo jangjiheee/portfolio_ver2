@@ -1,3 +1,21 @@
+// reponsive
+$tablet-size : 1023px;
+$mobile-size : 767px;
+
+@mixin tab {
+    @media (max-width: $tablet-size) {
+        @content;
+    }
+}
+
+@mixin mo {
+    @media (max-width: $mobile-size) {
+        @content;
+    }
+}
+
+
+// common
 @mixin dot {
     span.__double_dot {
         position: relative;
@@ -25,4 +43,3 @@
         }
     }
 }
-

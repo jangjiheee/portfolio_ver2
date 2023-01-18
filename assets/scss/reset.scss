@@ -67,10 +67,20 @@ html, body {
     max-width: 1520px;
     margin: 0 auto;
     padding: 0 30px;
+	@include mo {
+		padding: 0 20px;
+	}
 }
 
 h3 {
 	// 60px
     font-size: 4rem;
     font-weight: 700;
+	@include tab {
+		font-size: 2.625rem;
+	}
+
+	@include mo {
+		font-size: 1.75rem;
+	}
 }

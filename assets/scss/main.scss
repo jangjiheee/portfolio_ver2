@@ -1,31 +1,5 @@
 @import "../../assets/scss/reset.scss";
 
-// span.__double_dot {
-//     position: relative;
-//     &::before {
-//         position: absolute;
-//         content: "";
-//         width: 10px;
-//         height: 10px;
-//         background-color: $color-black;
-//         top: 0;
-//         left: calc(50% - 8px);
-//         transform: translateX(-50%);
-//         border-radius: 50%;
-//     }
-//     &:after {
-//         position: absolute;
-//         content: "";
-//         width: 10px;
-//         height: 10px;
-//         background-color: $color-black;
-//         top: 0;
-//         left: calc(50% + 8px);
-//         transform: translateX(-50%);
-//         border-radius: 50%;
-//     }
-// }
-
 header {
     background-color: $color-pink;
     height: 100vh;
@@ -59,22 +33,34 @@ header {
                     font-size: 2.25rem;
                     font-weight: 500;
                     margin-bottom: 40px;
+                    @include tab {
+                        font-size: 1.5rem;
+                    }
                 }
                 .__name {
                     font-size: 5rem;
                     margin-bottom: 40px;
                     font-weight: 700;
+                    @include tab {
+                        font-size: 3.375rem;
+                    }
                     span {
                         display: block;
                         margin-top: 20px;
                         // 24px
                         font-size: 1.5rem;
                         font-weight: 400;
+                        @include tab {
+                            font-size: 1.2rem;
+                        }
                     }
                     & + p {
                         // 18px 
                         font-size: 1.125rem;
                         line-height: 1.2;
+                        @include tab {
+                            font-size: 1rem;
+                        }
                     }
                 }
             }
@@ -139,54 +125,57 @@ $panelcount: 4; // set # of panels/sections here
 
 .__do {
     width: 100%;
-  height: 100%;
-  overflow: hidden;
-  perspective: 1000;
-  padding-top: 100px;
-  .__fit_title {
-    @include dot();
-    padding-left: 100px;
-  }
-  .section {
-    & {
-      padding-bottom: 200px;
-      height: calc(100% - 600px);
-      width: calc( 100% / #{$panelcount} );
-      float: left;
-      position: relative;
-      .__text_position {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        .__cont_img {
-            text-align: center;
+    height: 100%;
+    overflow: hidden;
+    perspective: 1000;
+    padding-top: 100px;
+    .__fit_title {
+        @include dot();
+        padding-left: 100px;
+        @include tab {
+            padding-left: 60px;
         }
-        .__cont_txt {
-            max-width: 284px;
-            padding-top: 53px;
-            margin: 0 auto;
-            .__cont_tit {
-                font-size: 1.125rem;
-                margin-bottom: 20px;
+    }
+    .section {
+        & {
+            padding-bottom: 200px;
+            height: calc(100% - 600px);
+            width: calc( 100% / #{$panelcount} );
+            float: left;
+            position: relative;
+            .__text_position {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            .__cont_img {
+                text-align: center;
+            }
+            .__cont_txt {
+                max-width: 284px;
+                padding-top: 53px;
+                margin: 0 auto;
+                .__cont_tit {
+                    font-size: 1.125rem;
+                    margin-bottom: 20px;
+                }
+            }
+            }
+            
+            $colors: $color-orange, $color-lightgrey, $color-pink, $color-grey;
+            @for $i from 1 through length($colors) {
+                &:nth-child(#{$i}) {
+                    background: nth($colors, $i)
+                }
             }
         }
-      }
-      
-      $colors: $color-orange, $color-lightgrey, $color-pink, $color-grey;
-      @for $i from 1 through length($colors) {
-        &:nth-child(#{$i}) {
-          background: nth($colors, $i)
+        &s {
+            margin-top: 160px;
+            width: percentage($panelcount);
+            height: 100%;
+            position: relative;
         }
-      }
     }
-    &s {
-      margin-top: 160px;
-      width: percentage($panelcount);
-      height: 100%;
-      position: relative;
-    }
-  }
 }
 .__project {
     position: relative;
@@ -202,6 +191,8 @@ $panelcount: 4; // set # of panels/sections here
     }
     .__cont_wrap {
         max-height: 1080px;
+        border-top: 2px solid $color-pink;
+        border-bottom: 2px solid $color-pink;
         .__cont_list {
             display: flex;
             justify-content: space-between;
@@ -251,105 +242,118 @@ $panelcount: 4; // set # of panels/sections here
             }
             .__cont_report {
                 width: calc(50% - 74px);
-                padding-top: 100px;
-                overflow-y: scroll;
-                &::-webkit-scrollbar {
-                    display: none;
-                }
+                // padding-top: 100px;
+                // overflow-y: scroll;
+                // &::-webkit-scrollbar {
+                //     display: none;
+                // }
                 .__report_wrap {
                     max-width: 600px;
                     margin: 0 auto;
-                    .__report_list {
-                        margin-bottom: 200px;
-                        h4 {
-                            font-size: 1.375rem;
-                            text-align: center;
-                            font-weight: 700;
-                            margin-bottom: 33px;
-                            position: relative;
-                            &::before {
-                                position: absolute;
-                                content: "";
-                                bottom: -16px;
-                                left: 0;
-                                height: 4px;
-                                width: 100%;
-                                background-color: $color-black;
-                            }
-                            span {
-                                font-weight: 400;
-                            }
-                            & + p {
-                                font-size: 0.875rem;
-                                line-height: 1.2;
-                                margin-bottom: 20px;
-                            }
-                        }
-                        .__capacity {
-                            display: flex;
-                            gap: 60px;
-                            line-height: 1.3;
-                            margin-bottom: 120px;
-                            .__capa_list {
-                                .__site {
-                                    font-weight: 700;
+                    overflow: hidden;
+                    .swiper-wrapper {
+                        max-height: 1080px;
+                        .__report_list {
+                            // margin-bottom: 200px;
+                            h4 {
+                                font-size: 1.375rem;
+                                text-align: center;
+                                font-weight: 700;
+                                margin-bottom: 33px;
+                                padding-top: 100px;
+                                position: relative;
+                                &::before {
+                                    position: absolute;
+                                    content: "";
+                                    bottom: -16px;
+                                    left: 0;
+                                    height: 4px;
+                                    width: 100%;
+                                    background-color: $color-black;
+                                }
+                                span {
+                                    font-weight: 400;
+                                }
+                                & + p {
+                                    font-size: 0.875rem;
+                                    line-height: 1.2;
+                                    margin-bottom: 20px;
                                 }
                             }
-                            .__capa_cont {
-                                .__go_site {
-                                    display: inline-block;
-                                    position: relative;
-                                    font-weight: 700;
-                                    &:after {
-                                        position: absolute;
-                                        content: "";
-                                        background-image: url("../images/right_arrow.png");
-                                        background-repeat: no-repeat;
-                                        background-size: contain;
-                                        width: 15px;
-                                        height: 15px;
-                                        top: 50%;
-                                        left: calc(100% + 8px);
-                                        transform: translateY(-50%);
-                                        cursor: pointer;
+                            .__capacity {
+                                display: flex;
+                                gap: 60px;
+                                line-height: 1.3;
+                                margin-bottom: 120px;
+                                .__capa_list {
+                                    .__site {
+                                        font-weight: 700;
                                     }
-                                    &:hover:before {
-                                        position: absolute;
-                                        content: "";
-                                        bottom: -4px;
-                                        left: 0;
-                                        width: 100%;
-                                        height: 2px;
-                                        background-color: $color-grey;
-                                        animation: underline 0.4s;
-                                    }
-                                    @keyframes underline {
-                                        0% {
-                                            left: 50%;
-                                            width: 0%;
+                                }
+                                .__capa_cont {
+                                    .__go_site {
+                                        display: inline-block;
+                                        position: relative;
+                                        font-weight: 700;
+                                        &:after {
+                                            position: absolute;
+                                            content: "";
+                                            background-image: url("../images/right_arrow.png");
+                                            background-repeat: no-repeat;
+                                            background-size: contain;
+                                            width: 15px;
+                                            height: 15px;
+                                            top: 50%;
+                                            left: calc(100% + 8px);
+                                            transform: translateY(-50%);
+                                            cursor: pointer;
                                         }
-                                        100% {
-                                            left: 0%;
+                                        &:hover:before {
+                                            position: absolute;
+                                            content: "";
+                                            bottom: -4px;
+                                            left: 0;
                                             width: 100%;
+                                            height: 2px;
+                                            background-color: $color-grey;
+                                            animation: underline 0.4s;
                                         }
-                                    }
-                                    &:hover:after {
-                                        transition: ease-in 0.4s;
-                                        left: calc(100% + 15px);
+                                        @keyframes underline {
+                                            0% {
+                                                left: 50%;
+                                                width: 0%;
+                                            }
+                                            100% {
+                                                left: 0%;
+                                                width: 100%;
+                                            }
+                                        }
+                                        &:hover:after {
+                                            transition: ease-in 0.4s;
+                                            left: calc(100% + 15px);
+                                        }
                                     }
                                 }
                             }
+                            .__report_img {
+                                text-align: center;
+                                margin-bottom: 90px;
+                            }
                         }
-                        .__report_img {
-                            text-align: center;
-                        }
+                    }
+                    .swiper-pagination {
+                        bottom: 20px;
+                        left: 50%;
+                        width: 47%;
+                    }
+                    .swiper-pagination-bullet {
+                        background-color: $color-black;
                     }
                 }
             }
         }
     }
 }
-
 
 footer {
     padding: 200px 0;
