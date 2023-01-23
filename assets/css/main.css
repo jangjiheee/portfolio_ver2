@@ -384,11 +384,13 @@ header .__main .__main_greet .__greet_img {
 }
 .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__site {
   font-weight: 700;
+  color: #0002A1;
 }
 .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_cont .__go_site {
   display: inline-block;
   position: relative;
   font-weight: 700;
+  color: #0002A1;
 }
 .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_cont .__go_site:after {
   position: absolute;
@@ -410,7 +412,7 @@ header .__main .__main_greet .__greet_img {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #5f5f5f;
+  background-color: #0002A1;
   -webkit-animation: underline 0.4s;
           animation: underline 0.4s;
 }
@@ -449,6 +451,8 @@ header .__main .__main_greet .__greet_img {
 }
 .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-pagination-bullet {
   background-color: #333;
+  width: 10px;
+  height: 10px;
 }
 
 footer {
