@@ -62,7 +62,12 @@ html, body {
     background-color: $color-bg;
     font-weight: 400;
 }
-
+section {
+	&.change {
+		background-color: $color-black;
+		color: $color-bg;
+	}
+}
 .__inner_wrapper {
     max-width: 1520px;
     margin: 0 auto;
