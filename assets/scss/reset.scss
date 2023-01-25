@@ -62,9 +62,10 @@ html, body {
     background-color: $color-bg;
     font-weight: 400;
 }
-section {
+
+section, footer {
 	&.change {
-		background-color: $color-black;
+		background: $color-dark-bg;
 		color: $color-bg;
 	}
 }

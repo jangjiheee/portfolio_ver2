@@ -1,11 +1,43 @@
 @import "../../assets/scss/reset.scss";
 
+@mixin dot {
+    span.__double_dot {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: $color-black;
+            top: 0;
+            left: calc(50% - 8px);
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: $color-black;
+            top: 0;
+            left: calc(50% + 8px);
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+        &.change::before,
+        &.change::after {
+            background-color: $color-bg;
+        }
+    }
+}
+
 header {
     background-color: $color-pink;
     height: 100vh;
     transition: ease-in 0.4s;
     &.change {
-        background-color: $color-black;
+        background-color: $color-point;
         color: $color-bg;
     }
     .__header {
@@ -76,10 +108,10 @@ header {
         .__main_greet {
             display: flex;
             height: 100%;
+            align-items: center;
             .__greet_txt {
                 width: 50%;
                 text-align: right;
-                padding-top: 200px;
                 .__greet {
                     // 80px
                     font-size: 2.25rem;
@@ -122,6 +154,7 @@ header {
         }
     }
 }
+
 
 // .__do {
 //     padding: 200px 0; 
@@ -217,7 +250,12 @@ $panelcount: 4; // set # of panels/sections here
             $colors: $color-orange, $color-lightgrey, $color-pink, $color-grey;
             @for $i from 1 through length($colors) {
                 &:nth-child(#{$i}) {
-                    background: nth($colors, $i)
+                    background: nth($colors, $i);
+                    &.change:nth-child(#{$i}) {
+                        background: $color-point;
+                        border-top: 1px solid $color-bg;
+                        border-bottom: 1px solid $color-bg;
+                    }
                 }
             }
         }
@@ -229,22 +267,28 @@ $panelcount: 4; // set # of panels/sections here
         }
     }
 }
+
 .__project {
     position: relative;
-    margin-top: 200px;
+    padding-top: 200px;
     &::before {
         position: absolute;
         content: "";
-        top: 0;
         left: 0;
         width: 50%;
         height: 100%;
+        max-height: 1080px;
+        bottom: 0;
         background: $color-pink;
+    }
+    &.change::before {
+        background: $color-point;
     }
     .__cont_wrap {
         max-height: 1080px;
         border-top: 2px solid $color-pink;
         border-bottom: 2px solid $color-pink;
+        box-sizing: border-box;
         .__cont_list {
             display: flex;
             justify-content: space-between;
