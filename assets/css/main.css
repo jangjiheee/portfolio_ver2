@@ -741,8 +741,6 @@ header .__main .__main_greet .__greet_img {
   margin-bottom: 20px;
 }
 .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity {
-  display: flex;
-  gap: 60px;
   line-height: 1.3;
   margin-bottom: 120px;
 }
@@ -757,17 +755,47 @@ header .__main .__main_greet .__greet_img {
     gap: 20px;
   }
 }
-.__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__site {
+.__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu {
+    flex-direction: column;
+    margin-bottom: 18px;
+  }
+  .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu:last-child {
+    margin-bottom: 0;
+  }
+}
+.__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu .__left_menu {
+  width: 25%;
+}
+@media (max-width: 767px) {
+  .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu .__left_menu {
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+}
+.__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu .__left_menu.__site {
   font-weight: 700;
   color: #eba91b;
 }
-.__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_cont .__go_site {
+.__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu .__right_menu {
+  width: 75%;
+}
+@media (max-width: 767px) {
+  .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu .__right_menu {
+    width: 100%;
+    font-size: 0.875rem;
+  }
+}
+.__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu .__right_menu.__go_site a {
   display: inline-block;
   position: relative;
   font-weight: 700;
   color: #eba91b;
 }
-.__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_cont .__go_site:after {
+.__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu .__right_menu.__go_site a:after {
   position: absolute;
   content: "";
   background-image: url("../images/right_arrow.png");
@@ -780,7 +808,12 @@ header .__main .__main_greet .__greet_img {
   transform: translateY(-50%);
   cursor: pointer;
 }
-.__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_cont .__go_site:hover:before {
+@media (max-width: 767px) {
+  .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu .__right_menu.__go_site a:after {
+    display: none;
+  }
+}
+.__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu .__right_menu.__go_site a:hover:before {
   position: absolute;
   content: "";
   bottom: -4px;
@@ -811,7 +844,7 @@ header .__main .__main_greet .__greet_img {
     width: 100%;
   }
 }
-.__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_cont .__go_site:hover:after {
+.__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu .__right_menu.__go_site a:hover:after {
   transition: ease-in 0.4s;
   left: calc(100% + 15px);
 }
