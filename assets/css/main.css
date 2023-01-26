@@ -1,4 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://webfontworld.github.io/gmarket/GmarketSans.css");
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf") format("truetype");
+  font-display: swap;
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf") format("truetype");
+  font-display: swap;
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf") format("truetype");
+  font-display: swap;
+  unicode-range: U+0041-005A, U+0061-007A;
+}
 /* HTML5 display-role reset for older browsers */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -59,7 +87,7 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", "GmarketSans";
   height: 100%;
   color: #333;
   background-color: #f9f9f9;
@@ -105,20 +133,6 @@ header {
 header.change {
   background-color: #3F4E4F;
   color: #f9f9f9;
-}
-header .__header {
-  height: 80px;
-  display: flex;
-  align-items: center;
-}
-@media (max-width: 767px) {
-  header .__header {
-    height: 60px;
-  }
-}
-header .__header .__logo_box {
-  color: #eba91b;
-  font-size: 16px;
 }
 header #__mode_btn {
   position: absolute;
@@ -206,7 +220,7 @@ header #__mode_btn.active .__indicator {
   }
 }
 header .__main {
-  height: calc(100vh - 80px);
+  height: 100vh;
 }
 header .__main .__main_greet {
   display: flex;
@@ -305,6 +319,11 @@ header .__main .__main_greet .__greet_img {
   perspective: 1000;
   padding-top: 100px;
 }
+@media (max-width: 767px) {
+  .__do {
+    padding-top: 60px;
+  }
+}
 .__do .__fit_title {
   padding-left: 100px;
 }
@@ -375,29 +394,45 @@ header .__main .__main_greet .__greet_img {
   }
 }
 .__do .section {
-  padding-bottom: 200px;
+  padding-bottom: 250px;
   height: calc(100% - 600px);
   width: calc( 100% / 4 );
   float: left;
   position: relative;
+}
+@media (max-width: 767px) {
+  .__do .section {
+    height: calc(100% - 500px);
+  }
 }
 .__do .section .__text_position {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  max-width: 450px;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .__do .section .__text_position {
+    max-width: 280px;
+    width: 100%;
+  }
 }
 .__do .section .__text_position .__cont_img {
   text-align: center;
 }
 .__do .section .__text_position .__cont_txt {
-  max-width: 284px;
-  padding-top: 53px;
+  padding-top: 80px;
   margin: 0 auto;
 }
 .__do .section .__text_position .__cont_txt .__cont_tit {
   font-size: 1.125rem;
+  font-weight: 700;
   margin-bottom: 20px;
+}
+.__do .section .__text_position .__cont_txt .__cont_desc {
+  line-height: 1.4;
 }
 .__do .section:nth-child(1) {
   background: #eba91b;
@@ -428,6 +463,23 @@ header .__main .__main_greet .__greet_img {
   width: 400%;
   height: 100%;
   position: relative;
+}
+@media (max-width: 767px) {
+  .__do .sections {
+    margin-top: 80px;
+  }
+}
+.__do .sections .section::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0%;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+}
+.__do .sections .section.change::after {
+  background-color: #e6e6e6;
 }
 
 .__project {

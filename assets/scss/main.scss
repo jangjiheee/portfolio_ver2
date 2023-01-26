@@ -60,18 +60,18 @@ header {
         background-color: $color-point;
         color: $color-bg;
     }
-    .__header {
-        height: 80px;
-        display: flex;
-        align-items: center;
-        @include mo {
-            height: 60px;
-        }
-        .__logo_box {
-            color: $color-orange;
-            font-size: 16px;
-        }
-    }
+    // .__header {
+    //     height: 80px;
+    //     display: flex;
+    //     align-items: center;
+    //     @include mo {
+    //         height: 60px;
+    //     }
+    //     .__logo_box {
+    //         color: $color-orange;
+    //         font-size: 16px;
+    //     }
+    // }
 
     #__mode_btn {
         position: absolute;
@@ -157,7 +157,8 @@ header {
     }
 
     .__main {
-        height: calc(100vh - 80px);
+        // height: calc(100vh - 80px);
+        height: 100vh;
         .__main_greet {
             display: flex;
             height: 100%;
@@ -290,6 +291,9 @@ $panelcount: 4; // set # of panels/sections here
     overflow: hidden;
     perspective: 1000;
     padding-top: 100px;
+    @include mo {
+        padding-top: 60px
+    }
     .__fit_title {
         @include dot();
         padding-left: 100px;
@@ -302,28 +306,40 @@ $panelcount: 4; // set # of panels/sections here
     }
     .section {
         & {
-            padding-bottom: 200px;
+            padding-bottom: 250px;
             height: calc(100% - 600px);
             width: calc( 100% / #{$panelcount} );
             float: left;
             position: relative;
+            @include mo {
+                height: calc(100% - 500px);
+            }
             .__text_position {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            .__cont_img {
-                text-align: center;
-            }
-            .__cont_txt {
-                max-width: 284px;
-                padding-top: 53px;
-                margin: 0 auto;
-                .__cont_tit {
-                    font-size: 1.125rem;
-                    margin-bottom: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 450px;
+                width: 100%;
+                @include mo {
+                    max-width: 280px;
+                    width: 100%;
                 }
-            }
+                .__cont_img {
+                    text-align: center;
+                }
+                .__cont_txt {
+                    padding-top: 80px;
+                    margin: 0 auto;
+                    .__cont_tit {
+                        font-size: 1.125rem;
+                        font-weight: 700;
+                        margin-bottom: 20px;
+                    }
+                    .__cont_desc {
+                        line-height: 1.4;
+                    }
+                }
             }
             
             // $colors: $color-orange, $color-lightgrey, $color-pink, $color-grey;
@@ -344,6 +360,21 @@ $panelcount: 4; // set # of panels/sections here
             width: percentage($panelcount);
             height: 100%;
             position: relative;
+            @include mo {
+                margin-top: 80px;
+            }
+            .section::after {
+                position: absolute;
+                content: "";
+                top: 50%;
+                left: 0%;
+                width: 100%;
+                height: 1px;
+                background-color: $color-black;
+            }
+            .section.change::after {
+                background-color: $color-e6;
+            }
         }
     }
 }
