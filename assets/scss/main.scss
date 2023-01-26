@@ -326,14 +326,15 @@ $panelcount: 4; // set # of panels/sections here
             }
             }
             
-            $colors: $color-orange, $color-lightgrey, $color-pink, $color-grey;
+            // $colors: $color-orange, $color-lightgrey, $color-pink, $color-grey;
+            $colors: $color-orange, $color-e6, $color-pink, $color-lightgrey;
             @for $i from 1 through length($colors) {
                 &:nth-child(#{$i}) {
                     background: nth($colors, $i);
                     &.change:nth-child(#{$i}) {
                         background: $color-point;
-                        border-top: 1px solid $color-bg;
-                        border-bottom: 1px solid $color-bg;
+                        // border-top: 1px solid $color-bg;
+                        // border-bottom: 1px solid $color-bg;
                     }
                 }
             }
@@ -435,7 +436,7 @@ $panelcount: 4; // set # of panels/sections here
                                 position: absolute;
                                 content: "";
                                 top: 50%;
-                                left: -9px;
+                                left: -8px;
                                 transform: translateY(-50%);
                                 width: 12px;
                                 height: 12px;
@@ -532,7 +533,7 @@ $panelcount: 4; // set # of panels/sections here
                                 .__capa_list {
                                     .__site {
                                         font-weight: 700;
-                                        color: $color-blue;
+                                        color: $color-orange;
                                     }
                                 }
                                 .__capa_cont {
@@ -540,7 +541,7 @@ $panelcount: 4; // set # of panels/sections here
                                         display: inline-block;
                                         position: relative;
                                         font-weight: 700;
-                                        color: $color-blue;
+                                        color: $color-orange;
                                         &:after {
                                             position: absolute;
                                             content: "";
@@ -561,7 +562,7 @@ $panelcount: 4; // set # of panels/sections here
                                             left: 0;
                                             width: 100%;
                                             height: 2px;
-                                            background-color: $color-blue;
+                                            background-color: $color-orange;
                                             animation: underline 0.4s;
                                         }
                                         @keyframes underline {
@@ -602,7 +603,7 @@ $panelcount: 4; // set # of panels/sections here
                         }
                     }
                     .swiper-pagination-bullet {
-                        background-color: $color-blue;
+                        background-color: $color-orange;
                         width: 10px;
                         height: 10px;
                     }

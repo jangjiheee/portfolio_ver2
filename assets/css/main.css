@@ -117,7 +117,7 @@ header .__header {
   }
 }
 header .__header .__logo_box {
-  color: #FFC23C;
+  color: #eba91b;
   font-size: 16px;
 }
 header #__mode_btn {
@@ -400,36 +400,28 @@ header .__main .__main_greet .__greet_img {
   margin-bottom: 20px;
 }
 .__do .section:nth-child(1) {
-  background: #FFC23C;
+  background: #eba91b;
 }
 .__do .section:nth-child(1).change:nth-child(1) {
   background: #3F4E4F;
-  border-top: 1px solid #f9f9f9;
-  border-bottom: 1px solid #f9f9f9;
 }
 .__do .section:nth-child(2) {
-  background: #c9c9c9;
+  background: #e6e6e6;
 }
 .__do .section:nth-child(2).change:nth-child(2) {
   background: #3F4E4F;
-  border-top: 1px solid #f9f9f9;
-  border-bottom: 1px solid #f9f9f9;
 }
 .__do .section:nth-child(3) {
   background: #F8E6E0;
 }
 .__do .section:nth-child(3).change:nth-child(3) {
   background: #3F4E4F;
-  border-top: 1px solid #f9f9f9;
-  border-bottom: 1px solid #f9f9f9;
 }
 .__do .section:nth-child(4) {
-  background: #5f5f5f;
+  background: #c9c9c9;
 }
 .__do .section:nth-child(4).change:nth-child(4) {
   background: #3F4E4F;
-  border-top: 1px solid #f9f9f9;
-  border-bottom: 1px solid #f9f9f9;
 }
 .__do .sections {
   margin-top: 160px;
@@ -607,7 +599,7 @@ header .__main .__main_greet .__greet_img {
   position: absolute;
   content: "";
   top: 50%;
-  left: -9px;
+  left: -8px;
   transform: translateY(-50%);
   width: 12px;
   height: 12px;
@@ -714,13 +706,13 @@ header .__main .__main_greet .__greet_img {
 }
 .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__site {
   font-weight: 700;
-  color: #0002A1;
+  color: #eba91b;
 }
 .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_cont .__go_site {
   display: inline-block;
   position: relative;
   font-weight: 700;
-  color: #0002A1;
+  color: #eba91b;
 }
 .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_cont .__go_site:after {
   position: absolute;
@@ -742,7 +734,7 @@ header .__main .__main_greet .__greet_img {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #0002A1;
+  background-color: #eba91b;
   -webkit-animation: underline 0.4s;
           animation: underline 0.4s;
 }
@@ -791,7 +783,7 @@ header .__main .__main_greet .__greet_img {
   }
 }
 .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-pagination-bullet {
-  background-color: #0002A1;
+  background-color: #eba91b;
   width: 10px;
   height: 10px;
 }
