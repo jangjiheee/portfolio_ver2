@@ -230,6 +230,7 @@ header .__main .__main_greet {
 @media (max-width: 767px) {
   header .__main .__main_greet {
     flex-direction: column;
+    justify-content: center;
   }
 }
 header .__main .__main_greet .__greet_txt {
@@ -291,7 +292,7 @@ header .__main .__main_greet .__greet_txt .__name span {
 }
 header .__main .__main_greet .__greet_txt .__name + p {
   font-size: 1.125rem;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 @media (max-width: 1023px) {
   header .__main .__main_greet .__greet_txt .__name + p {
@@ -427,7 +428,7 @@ header .__main .__main_greet .__greet_img {
   margin: 0 auto;
 }
 .__do .section .__text_position .__cont_txt .__cont_tit {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -853,7 +854,7 @@ footer {
 }
 @media (max-width: 767px) {
   footer {
-    font-size: 0.875px;
+    font-size: 0.875rem;
   }
 }
 footer h3 {
@@ -925,13 +926,19 @@ footer .__connection_icon {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 767px) {
+  footer .__connection_icon {
+    flex-direction: column;
+  }
+}
 footer .__connection_icon p {
   margin-right: 80px;
   font-weight: 700;
 }
 @media (max-width: 767px) {
   footer .__connection_icon p {
-    margin-right: 50px;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }
 footer .__connection_icon .__icon_wrap {
