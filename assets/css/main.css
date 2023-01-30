@@ -395,15 +395,19 @@ header .__main .__main_greet .__greet_img {
   }
 }
 .__do .section {
-  padding-bottom: 250px;
-  height: calc(100% - 600px);
+  height: calc(100vh - 500px);
   width: calc( 100% / 4 );
   float: left;
   position: relative;
 }
+@supports (-webkit-appearance: none) and (stroke-color: transparent) {
+  .__do .section {
+    min-height: -webkit-fill-available;
+  }
+}
 @media (max-width: 767px) {
   .__do .section {
-    height: calc(100% - 500px);
+    height: calc(100vh - 200px);
   }
 }
 .__do .section .__text_position {
@@ -460,7 +464,7 @@ header .__main .__main_greet .__greet_img {
   background: #3F4E4F;
 }
 .__do .sections {
-  margin-top: 160px;
+  margin-top: 150px;
   width: 400%;
   height: 100%;
   position: relative;
@@ -485,6 +489,7 @@ header .__main .__main_greet .__greet_img {
 
 .__project {
   position: relative;
+  margin-top: 300px;
 }
 @media (max-width: 1023px) {
   .__project {
@@ -778,6 +783,9 @@ header .__main .__main_greet .__greet_img {
 }
 .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu .__left_menu.__site {
   font-weight: 700;
+  color: #0002A1;
+}
+.__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu .__left_menu.__site.active {
   color: #eba91b;
 }
 .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu .__right_menu {
@@ -793,6 +801,9 @@ header .__main .__main_greet .__greet_img {
   display: inline-block;
   position: relative;
   font-weight: 700;
+  color: #0002A1;
+}
+.__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu .__right_menu.__go_site a.active {
   color: #eba91b;
 }
 .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu .__right_menu.__go_site a:after {
@@ -820,9 +831,12 @@ header .__main .__main_greet .__greet_img {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #eba91b;
+  background-color: #0002A1;
   -webkit-animation: underline 0.4s;
           animation: underline 0.4s;
+}
+.__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-wrapper .__report_list .__capacity .__capa_list .__list_menu .__right_menu.__go_site a.active:hover:before {
+  background-color: #eba91b;
 }
 @-webkit-keyframes underline {
   0% {
@@ -869,9 +883,12 @@ header .__main .__main_greet .__greet_img {
   }
 }
 .__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-pagination-bullet {
-  background-color: #eba91b;
+  background-color: #0002A1;
   width: 10px;
   height: 10px;
+}
+.__project .__cont_wrap .__cont_list .__cont_report .__report_wrap .swiper-pagination-bullet.change {
+  background-color: #f9f9f9;
 }
 
 footer {

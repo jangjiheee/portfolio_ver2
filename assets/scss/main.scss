@@ -256,13 +256,15 @@ $panelcount: 4; // set # of panels/sections here
     }
     .section {
         & {
-            padding-bottom: 250px;
-            height: calc(100% - 600px);
+            height: calc(100vh - 500px);
+            @supports (-webkit-appearance:none) and (stroke-color: transparent) {
+                min-height: -webkit-fill-available;
+              }
             width: calc( 100% / #{$panelcount} );
             float: left;
             position: relative;
             @include mo {
-                height: calc(100% - 500px);
+                height: calc(100vh - 200px);
             }
             .__text_position {
                 position: absolute;
@@ -306,7 +308,7 @@ $panelcount: 4; // set # of panels/sections here
             }
         }
         &s {
-            margin-top: 160px;
+            margin-top: 150px;
             width: percentage($panelcount);
             height: 100%;
             position: relative;
@@ -331,7 +333,7 @@ $panelcount: 4; // set # of panels/sections here
 
 .__project {
     position: relative;
-    // padding-top: 200px;
+    margin-top: 300px;
     @include tab {
         padding-top: 80px;
     }
@@ -529,7 +531,10 @@ $panelcount: 4; // set # of panels/sections here
                                             }
                                             &.__site {
                                                 font-weight: 700;
-                                                color: $color-orange;
+                                                color: $color-blue;
+                                                &.active {
+                                                    color: $color-orange;
+                                                }
                                             }
                                         }
                                         .__right_menu {
@@ -543,7 +548,10 @@ $panelcount: 4; // set # of panels/sections here
                                                     display: inline-block;
                                                     position: relative;
                                                     font-weight: 700;
-                                                    color: $color-orange;
+                                                    color: $color-blue;
+                                                    &.active {
+                                                        color: $color-orange;
+                                                    }
                                                     &:after {
                                                         position: absolute;
                                                         content: "";
@@ -567,8 +575,11 @@ $panelcount: 4; // set # of panels/sections here
                                                         left: 0;
                                                         width: 100%;
                                                         height: 2px;
-                                                        background-color: $color-orange;
+                                                        background-color: $color-blue;
                                                         animation: underline 0.4s;
+                                                    }
+                                                    &.active:hover:before{
+                                                        background-color: $color-orange;
                                                     }
                                                     @keyframes underline {
                                                         0% {
@@ -611,9 +622,12 @@ $panelcount: 4; // set # of panels/sections here
                         }
                     }
                     .swiper-pagination-bullet {
-                        background-color: $color-orange;
+                        background-color: $color-blue;
                         width: 10px;
                         height: 10px;
+                        &.change {
+                            background-color: $color-bg;
+                        }
                     }
                 }
             }
