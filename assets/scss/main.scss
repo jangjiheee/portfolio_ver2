@@ -636,222 +636,29 @@ $panelcount: 4; // set # of panels/sections here
 // }
 
 .__project {
+    // padding-bottom: 100px;
     .__project_title {
+        @include dot();
+        text-align: center;
         margin-bottom: 100px;
     }
-    .tab{
-        width: 100%;
-        height: 1080px;
-        display: flex;
-        border-top: 1px solid $color-grey;
-        border-bottom: 1px solid $color-grey;
-    }
-
-    .tablist {
-        width: 20%;
-        min-width: 370px;
-    }
-    
-    .tablist li{
-        display: block; 
-        height:60px; 
-        text-align: left; 
-    }
-
-    .tablist li a{
-        position:relative; 
-        display:block; 
-        /* background: #f8f8f8; */
-        color: #000; 
-        padding-left: 40px; 
-        line-height:60px; 
-        text-decoration:none; 
-        font-size:16px;
-    }
-    .tablist li a:after{
-        content:""; 
-        position:absolute; 
-        left:0; 
-        top:0px; 
-        width:15px;
-        height:100%;
-        background: $color-pink;
-        z-index: -1;
-    }
-    .tablist li a.active::after{
-        // background:#7ea21e;
-        animation: back 1s;
-        animation-fill-mode: forwards;
-        /* border-bottom:1px solid #fff; */
-    }
-    
-    @keyframes back {
-        0% {
-            width: 15px;
+    .swiper {
+        .swiper-pagination {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 50px;
+            font-weight: 700;
+            bottom: unset;
+            width: unset;
         }
-        100% {
-            width: 100%;
-        }
-    }
-    
-    .tabcontent{
-        width: 80%;
-        padding: 0 7%; 
-        border-top:none;
-        .tabCont{
-            // max-width: 800px;
-            margin: 0 auto;
-            h4 {
-                font-size: 1.375rem;
-                text-align: center;
-                font-weight: 700;
-                margin-bottom: 33px;
-                padding-top: 50px;
-                position: relative;
-                @include tab {
-                    padding-top: 80px;
-                    font-size: 1.25rem;
-                }
-                @include mo {
-                    font-size: 1.1rem;
-                    line-height: 1.3;
-                }
-                &::before {
-                    position: absolute;
-                    content: "";
-                    bottom: -16px;
-                    left: 0;
-                    height: 4px;
-                    width: 100%;
-                    background-color: $color-black;
-                }
-                span {
-                    font-weight: 400;
-                }
-                & + p {
-                    font-size: 0.875rem;
-                    line-height: 1.2;
-                    margin-bottom: 60px;
-                }
-            }
-            .__report_box {
-                display: flex;
-                align-items: flex-start;
-                @media screen and (max-width:1920px) {
-                    flex-direction: column;
-                }
-                .__capacity {
-                    width: 50%;
-                    line-height: 1.3;
-                    margin-bottom: 120px;
-                    @media screen and (max-width:1920px) {
-                        width: 100%;
-                    }
-                    @include tab {
-                        margin-bottom: 80px;
-                        gap: 40px;
-                    }
-                    @include mo {
-                        gap: 20px;
-                    }
-                    .__capa_list {
-                        .__list_menu {
-                            display: flex;
-                            @include mo {
-                                flex-direction: column;
-                                margin-bottom: 18px;
-                                &:last-child {
-                                    margin-bottom: 0;
-                                }
-                            }
-                            .__left_menu {
-                                width: 25%;
-                                @include mo {
-                                    margin-bottom: 4px;
-                                    font-weight: 700;
-                                }
-                                &.__site {
-                                    font-weight: 700;
-                                    color: $color-blue;
-                                    &.active {
-                                        color: $color-orange;
-                                    }
-                                }
-                            }
-                            .__right_menu {
-                                width: 75%;
-                                @include mo {
-                                    width: 100%;
-                                    font-size: 0.875rem;
-                                }
-                                &.__go_site {
-                                    a {
-                                        display: inline-block;
-                                        position: relative;
-                                        font-weight: 700;
-                                        color: $color-blue;
-                                        &.active {
-                                            color: $color-orange;
-                                        }
-                                        &:after {
-                                            position: absolute;
-                                            content: "";
-                                            background-image: url("../images/right_arrow.png");
-                                            background-repeat: no-repeat;
-                                            background-size: contain;
-                                            width: 15px;
-                                            height: 15px;
-                                            top: 50%;
-                                            left: calc(100% + 8px);
-                                            transform: translateY(-50%);
-                                            cursor: pointer;
-                                            @include mo {
-                                                display: none;
-                                            }
-                                        }
-                                        &:hover:before {
-                                            position: absolute;
-                                            content: "";
-                                            bottom: -4px;
-                                            left: 0;
-                                            width: 100%;
-                                            height: 2px;
-                                            background-color: $color-blue;
-                                            animation: underline 0.4s;
-                                        }
-                                        &.active:hover:before{
-                                            background-color: $color-orange;
-                                        }
-                                        @keyframes underline {
-                                            0% {
-                                                left: 50%;
-                                                width: 0%;
-                                            }
-                                            100% {
-                                                left: 0%;
-                                                width: 100%;
-                                            }
-                                        }
-                                        &:hover:after {
-                                            transition: ease-in 0.4s;
-                                            left: calc(100% + 15px);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                .__report_img {
+        .swiper-wrapper {
+            padding-top: 100px;
+            .swiper-slide {
+                figure {
                     text-align: center;
-                    margin-bottom: 90px;
-                    @media screen and (max-width:1920px) {
-                        width: 100%;
-                    }
                     img {
-                        display: block;
-                        width: 100%;
-                        max-width: 600px;
+                        box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
                     }
                 }
             }
@@ -864,6 +671,7 @@ footer {
     padding: 200px 0;
     text-align: center;
     font-size: 1.125rem;
+    background: $color-pink;
     @include tab {
         padding: 150px 0;
         font-size: 1rem;
