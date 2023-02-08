@@ -1,0 +1,28 @@
+@import "../../assets/scss/reset.scss";
+
+
+.wrapper {
+    display: flex;
+}
+
+header {
+    height: 100vh;
+}
+.__inner_wrapper {
+    max-width: 1660px;
+    padding-right: 0;
+}
+
+.__left {
+    width: calc(100% - 140px);
+}
+
+.__right {
+    width: 140px;
+    border-left: 1px solid $color-black;
+    background-color: $color-pink;
+}
+
+.__do {
+    height: 3000px;
+}
