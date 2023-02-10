@@ -1,37 +1,3 @@
-$(function () { // wait for document ready
-    var controller = new ScrollMagic.Controller();
-
-    var horizontalSlide = new TimelineMax()
-    // animate panels
-    .to("#js-slideContainer", 1,   {x: "-25%"}) 
-    .to("#js-slideContainer", 1,   {x: "-50%"})
-    .to("#js-slideContainer", 1,   {x: "-75%"})
-    //   .to("#js-slideContainer", 1,   {x: "-80%"})
-
-
-    // create scene to pin and link animation
-    new ScrollMagic.Scene({
-        triggerElement: "#js-wrapper",
-        triggerHook: "onLeave",
-        duration: "400%"
-    })
-        .setPin("#js-wrapper")
-        .setTween(horizontalSlide)
-        //.addIndicators() // add indicators (requires plugin)
-        .addTo(controller);       
-    
-    }
-);
-
-
-$('.tabcontent > div').hide();
-$('.tablist a').click(function () {
-    $('.tabcontent > div').hide().filter(this.hash).fadeIn();
-    $('.tablist a').removeClass('active');
-    $(this).addClass('active');
-    return false;
-}).filter(':eq()').click();
-
 window.onload = function() {
     const toggle = document.getElementById("__mode_btn");
     const header = document.querySelector('header');
