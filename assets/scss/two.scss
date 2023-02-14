@@ -10,49 +10,93 @@ header {
 
 .__inner_wrapper {
     max-width: 1660px;
-    padding-right: 0;
 }
 
 .__left {
-    width: calc(100% - 140px);
+    width: calc(100% - 110px);
+    @include mo {
+        width: calc(100% - 80px);
+    }
     header {
         .__menu {
             height: 80px;
-            position: fixed;
             width: 100%;
             background-color: $color-pink;
-            border-bottom: 1px solid $color-lightgrey;
+            border-bottom: 1px solid rgba($color-e6, 0.8);
+            z-index: 1;
             display: flex;
             align-items: center;
-            z-index: 1;
+            position: fixed;
+            @include tab {
+                height: 60px;
+            }
             .__mobile_btn {
-                width: 30px;
-                height: 20px;
-                display: flex;
-                flex-direction: column;
+                width: 35px;
+                height: 25px;
                 position: relative;
-                padding-left: 40px;
-                .__line {
-                    width: 30px;
-                    height: 3px;
-                    display: block;
-                    background-color: $color-black;
+                display: block;
+                cursor: pointer;
+                margin-left: 40px;
+                z-index: 2;
+                .line {
                     position: absolute;
-                    border-radius: 20px;
+                    height: 3px;
+                    background: $color-black;
+                    width: 100%;
+                    transition: all 1s;
                     &.line01 {
                         top: 0;
                     }
                     &.line02 {
+                        width: 25px;
                         top: 50%;
-                        width: 24px;
+                        transform: translateY(-50%);
                     }
                     &.line03 {
-                        top: 100%;
+                        bottom: 0;
+                    }
+                    &.active {
+                        &.line01 {
+                            top: 50%;
+                            transform: rotate(45deg) translateY(-50%);
+                        }
+                        &.line02 {
+                            opacity: 0;
+                        }
+                        &.line03 {
+                            bottom: 50%;
+                            transform: rotate(-45deg) translateY(50%);
+                        }
                     }
                 }
             }
-            .__nav {
-                display: none;
+            .mobile_nav{
+                position: absolute;
+                width: 0px;
+                height: 100vh;
+                background: white;
+                left: 0;
+                top: 0;
+                transition: all 0.8s;
+                .nav_list {
+                    opacity: 0;
+                    transition: all 0.7s;
+                    margin-top: 80px;
+                    padding: 50px 20px 20px 40px;
+                    .mobile_list_box {
+                        ul {
+                            li {
+                                padding: 20px 0 ;
+                            }
+                        }
+                    }
+                }
+                &.active {
+                    width: 300px;
+                    .nav_list {
+                        opacity: 1;
+                    }
+                }
             }
         }
         .__main_greet {
@@ -64,6 +108,63 @@ header {
             background-color: $color-pink;
             .__greet_txt {
                 width: 50%;
+                text-align: right;
+                @include tab {
+                    width: 100%;
+                    text-align: right;
+                }
+
+                @include mo {
+                    text-align: left;
+                }
+                .__greet {
+                    // 80px
+                    font-size: 2.25rem;
+                    font-weight: 500;
+                    margin-bottom: 40px;
+                    @include tab {
+                        font-size: 1.5rem;
+                    }
+                    @include mo {
+                        font-size: 1.2rem;
+                    }
+                }
+                .__name {
+                    font-size: 5rem;
+                    margin-bottom: 40px;
+                    font-weight: 700;
+                    @include tab {
+                        font-size: 3.375rem;
+                    }
+                    @include mo {
+                        font-size: 2rem;
+                        margin-bottom: 30px;
+                    }
+                    span {
+                        display: block;
+                        margin-top: 20px;
+                        // 24px
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        @include tab {
+                            font-size: 1.2rem;
+                        }
+                        @include mo {
+                            font-size: 1rem;
+                        }
+                    }
+                    & + p {
+                        // 18px 
+                        font-size: 1.125rem;
+                        line-height: 1.4;
+                        @include tab {
+                            font-size: 1rem;
+                        }
+                        @include mo {
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
             }
         }
     }
@@ -74,20 +175,57 @@ header {
                 margin-bottom: 100px;
             }
             .__do_list {
+                padding-top: 150px;
+                position: relative;
+                &:before {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $color-black;
+                }
                 .flip {
                     display: flex;
                     justify-content: space-evenly;
                     .flip_card {
                         transform-style: preserve-3d;
                         perspective: 1000px;
-                        width: 240px;
+                        width: 210px;
                         height: 300px;
-                        transition: transform 0.4s;
+                        transition: transform 0.5s;
+                        position: relative;
+                        @include tab {
+                            width: 136px;
+                            height: 270px;
+                        }
+                        &:before {
+                            position: absolute;
+                            content: "";
+                            width: 1px;
+                            height: 150px;
+                            left: 50%;
+                            bottom: 100%;
+                            background-color: $color-black;
+                        }
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            width: 14px;
+                            height: 14px;
+                            border-radius: 50%;
+                            bottom: calc(100% + 143px);
+                            border: 1px solid $color-black;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            background-color: $color-pink;
+                        }
                         .front, .back {
                             width: 100%;
                             height: 100%;
                             backface-visibility: hidden;
-                            border-radius: 6px;
+                            border-radius: 8px;
                             transform: rotateY(0deg);
                             transform-style: preserve-3d;
                             display: flex;
@@ -116,13 +254,154 @@ header {
                             top: 0;
                             left: 0%;
                             width: 100%;
-                            background: $color-lightgrey;
+                            background: $color-black;
                             transform: rotateY(180deg);
                             transform-style: preserve-3d;
+                            .card_inner {
+                                color: $color-bg;
+                                font-size: 20px;
+                                line-height: 1.8;
+                                @include tab{
+                                    font-size: 16px;
+                                }
+                            }
                         }
                         &:hover {
-                            transform: rotateY(180deg);
+                            transform: rotateY(-180deg);
                             transform-style: preserve-3d;
+                            .underline {
+                                position: relative;
+                                &:after {
+                                    position: absolute;
+                                    content: "";
+                                    bottom: -5px;
+                                    animation: line;
+                                    animation-duration: 0.7s;
+                                    animation-delay: 0.4s;
+                                    animation-fill-mode: forwards;
+                                    background-color: rgba($color-orange, 0.7);
+                                    height: 5px;
+                                }
+                                @keyframes line {
+                                    0% {
+                                        left: 0;
+                                        width: 0;
+                                    }
+                                    100% {
+                                        left: 0;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover:after {
+                            border: 1px solid $color-black;
+                            background-color: $color-ff;
+                        }
+                    }
+                }
+                .flip_title {
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin-top: 50px;
+                    .card_title {
+                        width: 210px;
+                        text-align: center;
+                        @include tab {
+                            width: 136px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .__portfolio {
+            .__port_sec {
+                padding: 230px 0;
+                &.sec_resort {
+                    background: url("../../assets/images/resort_bg.png") no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                    background-attachment: fixed;
+                }
+                &.sec_royal {
+                    background: url("../../assets/images/royal_bg.png") no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                    background-attachment: fixed;
+                }
+                &.sec_pr {
+                    background: url("../../assets/images/pr_bg.png") no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                    background-attachment: fixed;
+                }
+                .__port_cont {
+                    display: flex;
+                    justify-content: space-between;
+                    .__view_box {
+                        width: calc(50% - 30px);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        @include tab {
+                            width: calc(50% - 10px);
+                        }
+                        .__grey_num {
+                            margin-bottom: 30px;
+                            span {
+                                font-size: 180px;
+                                font-weight: 800;
+                                color: rgba($color-lightgrey,0.3);
+                                letter-spacing: -8px;
+                                @include tab {
+                                    font-size: 80px;
+                                }
+                            }
+                        }
+                        .__view_image {
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .__desc_box {
+                        width: calc(50% - 30px);
+                        padding-top: 90px;
+                        @include tab {
+                            width: calc(50% - 10px);
+                            padding-top: 15px;
+                        }
+                        .__desc_title {
+                            font-size: 36px;
+                            font-weight: 600;
+                            line-height: 1.4;
+                            margin-bottom: 100px;
+                            @include tab {
+                                font-size: 24px;
+                                margin-bottom: 60px;
+                            }
+                        }
+                        .__desc_text {
+                            .__text_box {
+                                margin-bottom: 40px;
+                                font-weight: 400;
+                                &:last-child {
+                                    margin-bottom: 0;
+                                    p {
+                                        &:last-child {
+                                            line-height: 1.6;
+                                        }
+                                    }
+                                }
+                                p {
+                                    &:first-child {
+                                        margin-bottom: 10px;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -132,17 +411,20 @@ header {
 }
 
 .__right {
-    width: 140px;
-    border-left: 1px solid $color-lightgrey;
+    width: 110px;
+    border-left: 1px solid rgba($color-e6, 0.8);
     background-color: $color-bg;
     position: relative;
     z-index: 1;
+    @include mo {
+        width: 80px;
+    }
     #__mode_btn {
         position: fixed;
         top: 20px;
-        right: 20px;
-        width: 100px;
-        height: 50px;
+        right: 15px;
+        width: 80px;
+        height: 40px;
         border-radius: 160px;
         background: #f8f8f8;
         transition: 0.5s;
@@ -151,23 +433,22 @@ header {
         inset 0 2px 8px rgba(0,0,0,0.1),
         inset 0 -4px 4px rgba(0,0,0,0.05);
         @include tab {
-            top: 30px;
-            right: 40px;
-            width: 70px;
-            height: 30px;
+            top: 16px;
+            right: 19px;
+            width: 72px;
+            height: 36px;
         }
         @include mo {
-            top: 20px;
-            right: 28px;
+            right: 10px;
             width: 60px;
-            height: 25px;
+            height: 30px;
         }
         .__indicator {
             position: absolute;
             top: 0;
             left: 0;
-            width: 48px;
-            height: 48px;
+            width: 38px;
+            height: 38px;
             background: #f8f8f8;
             background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
             background: url(../../assets/images/day.png) no-repeat;
@@ -182,13 +463,13 @@ header {
             transition: 0.5s;
             z-index: 1;
             @include tab {
-                width: 28px;
-                height: 28px;
+                width: 34px;
+                height: 34px;
                 background-size: 22px;
             }
             @include mo {
-                width: 23px;
-                height: 23px;
+                width: 28px;
+                height: 28px;
                 background-size: 16px;
             }
         }
@@ -198,7 +479,7 @@ header {
                         inset 0 8px 8px rgba(0,0,0,0.1),
                         inset 0 -4px 4px rgba(0,0,0,0.1);            
             .__indicator {
-                left: 50px;
+                left: 40px;
                 background: linear-gradient(to bottom, #444, #222);
                 background: url(../../assets/images/night.png) no-repeat;
                 background-size: 30px;

@@ -11,46 +11,13 @@ window.onload = function() {
     const pagination = document. querySelectorAll("span.swiper-pagination-bullet");
     console.log(pagination);
 
-    // const footer = document.querySelector('footer');
-    toggle.onclick = function() {
-        toggle.classList.toggle('active');
-        header.classList.toggle('change');
-        footer.classList.toggle('change');
-        for(i = 0; i<section.length; i++) {
-            section[i].classList.toggle('change');
+    const mobileBtn = document.querySelector(".__mobile_btn");
+    const line = document.querySelectorAll(".line");
+    const moNav = document.querySelector(".mobile_nav")
+    mobileBtn.addEventListener("click", ()=> {
+        for(i = 0; i <line.length; i++) {
+            line[i].classList.toggle("active");
         }
-        for(j = 0; j<dot.length; j++) {
-            dot[j].classList.toggle('change');
-        }
-        for(k=0; k<goSite.length; k++) {
-            goSite[k].classList.toggle("active");
-            url[k].classList.toggle("active");
-            // underLine[k].classList.toggle(".active");
-        }
-        for (i = 0; i < pagination.length; i++) {
-            pagination[i].classList.toggle("change");
-        } 
-        // item.document.documentElement.style.setProperty('background', 'black');
-    }
+        moNav.classList.toggle("active");
+    })
 }
-
-$(function(){
-var swiper = new Swiper(".proSwiper", {
-    slidesPerView: "auto",
-    // autoplay: {
-    //     delay: 6000,
-    //     disableOnInteraction: false,
-    // },
-        // spaceBetween: 30,
-        pagination: {
-            el: ".proSwiper .swiper-pagination",
-            type: "custom",
-            renderCustom: function (swiper, current) {
-              var pageNum = current < 10 ? '#_0' + current : current
-              $(".page-num").text(pageNum);
-            },
-        },
-        centeredSlide: true,
-        loop: true,
-      });
-    });
