@@ -334,7 +334,7 @@ header {
   perspective: 1000px;
   width: 210px;
   height: 300px;
-  transition: transform 0.5s;
+  transition: transform 0.7s;
   position: relative;
 }
 @media (max-width: 1023px) {
@@ -380,9 +380,15 @@ header {
   top: 50%;
   position: absolute;
   left: 0;
-  transform: translateY(-50%) translateZ(70px) scale(0.85);
+  transform: translateY(-50%) translateZ(40px) scale(0.85);
 }
-.__left main .__do .__do_list .flip .flip_card .front img, .__left main .__do .__do_list .flip .flip_card .back img {
+.__left main .__do .__do_list .flip .flip_card .front figure, .__left main .__do .__do_list .flip .flip_card .back figure {
+  display: block;
+}
+.__left main .__do .__do_list .flip .flip_card .front figure picture, .__left main .__do .__do_list .flip .flip_card .back figure picture {
+  display: block;
+}
+.__left main .__do .__do_list .flip .flip_card .front figure picture img, .__left main .__do .__do_list .flip .flip_card .back figure picture img {
   width: 100%;
 }
 .__left main .__do .__do_list .flip .flip_card .front {
@@ -425,8 +431,8 @@ header {
   bottom: -5px;
   -webkit-animation: line;
           animation: line;
-  -webkit-animation-duration: 0.7s;
-          animation-duration: 0.7s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
   -webkit-animation-fill-mode: forwards;

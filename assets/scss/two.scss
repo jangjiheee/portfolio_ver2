@@ -194,7 +194,7 @@ header {
                         perspective: 1000px;
                         width: 210px;
                         height: 300px;
-                        transition: transform 0.5s;
+                        transition: transform 0.7s;
                         position: relative;
                         @include tab {
                             width: 136px;
@@ -235,10 +235,16 @@ header {
                                 top: 50%;
                                 position: absolute;
                                 left: 0;
-                                transform: translateY(-50%) translateZ(70px) scale(0.85);
+                                transform: translateY(-50%) translateZ(40px) scale(0.85);
                             }
-                            img {
-                                width: 100%;
+                            figure {
+                                display: block;
+                                picture {
+                                    display: block;
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
                             }
                         }
                         .front {
@@ -276,7 +282,7 @@ header {
                                     content: "";
                                     bottom: -5px;
                                     animation: line;
-                                    animation-duration: 0.7s;
+                                    animation-duration: 0.8s;
                                     animation-delay: 0.4s;
                                     animation-fill-mode: forwards;
                                     background-color: rgba($color-orange, 0.7);
