@@ -336,6 +336,7 @@ header {
   height: 300px;
   transition: transform 0.7s;
   position: relative;
+  cursor: pointer;
 }
 @media (max-width: 1023px) {
   .__left main .__do .__do_list .flip .flip_card {
@@ -364,68 +365,73 @@ header {
   transform: translateX(-50%);
   background-color: #F8E6E0;
 }
-.__left main .__do .__do_list .flip .flip_card .front, .__left main .__do .__do_list .flip .flip_card .back {
+.__left main .__do .__do_list .flip .flip_card .card_inner {
+  position: relative;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  border-radius: 8px;
-  transform: rotateY(0deg);
+  text-align: center;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
+}
+.__left main .__do .__do_list .flip .flip_card .card_inner .front, .__left main .__do .__do_list .flip .flip_card .card_inner .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
-.__left main .__do .__do_list .flip .flip_card .front .card_inner, .__left main .__do .__do_list .flip .flip_card .back .card_inner {
-  top: 50%;
-  position: absolute;
-  left: 0;
-  transform: translateY(-50%) translateZ(40px) scale(0.85);
-}
-.__left main .__do .__do_list .flip .flip_card .front figure, .__left main .__do .__do_list .flip .flip_card .back figure {
-  display: block;
-}
-.__left main .__do .__do_list .flip .flip_card .front figure picture, .__left main .__do .__do_list .flip .flip_card .back figure picture {
-  display: block;
-}
-.__left main .__do .__do_list .flip .flip_card .front figure picture img, .__left main .__do .__do_list .flip .flip_card .back figure picture img {
-  width: 100%;
-}
-.__left main .__do .__do_list .flip .flip_card .front {
+.__left main .__do .__do_list .flip .flip_card .card_inner .front {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   background-color: white;
   border: 1px solid #c9c9c9;
+  transform-style: preserve-3d;
 }
-.__left main .__do .__do_list .flip .flip_card .back {
+.__left main .__do .__do_list .flip .flip_card .card_inner .front .gif_wrap {
+  transform: translateZ(70px) scale(0.85);
+}
+.__left main .__do .__do_list .flip .flip_card .card_inner .front .gif_wrap figure {
+  width: 100%;
+  height: 100%;
+}
+.__left main .__do .__do_list .flip .flip_card .card_inner .front .gif_wrap figure picture {
+  display: block;
+}
+.__left main .__do .__do_list .flip .flip_card .card_inner .front .gif_wrap figure picture img {
+  width: 100%;
+}
+.__left main .__do .__do_list .flip .flip_card .card_inner .back {
   position: absolute;
   top: 0;
-  left: 0%;
+  left: 0;
   width: 100%;
   background: #333;
   transform: rotateY(180deg);
   transform-style: preserve-3d;
-}
-.__left main .__do .__do_list .flip .flip_card .back .card_inner {
   color: #f9f9f9;
   font-size: 20px;
   line-height: 1.8;
+  text-align: left;
+}
+.__left main .__do .__do_list .flip .flip_card .card_inner .back .__cont_desc {
+  transform: translateZ(70px) scale(0.85);
 }
 @media (max-width: 1023px) {
-  .__left main .__do .__do_list .flip .flip_card .back .card_inner {
+  .__left main .__do .__do_list .flip .flip_card .card_inner .back {
     font-size: 16px;
   }
 }
-.__left main .__do .__do_list .flip .flip_card:hover {
+.__left main .__do .__do_list .flip .flip_card:hover .card_inner {
   transform: rotateY(-180deg);
-  transform-style: preserve-3d;
 }
-.__left main .__do .__do_list .flip .flip_card:hover .underline {
+.__left main .__do .__do_list .flip .flip_card:hover .card_inner .underline {
   position: relative;
 }
-.__left main .__do .__do_list .flip .flip_card:hover .underline:after {
+.__left main .__do .__do_list .flip .flip_card:hover .card_inner .underline:after {
   position: absolute;
   content: "";
   bottom: -5px;
@@ -615,10 +621,12 @@ header {
   padding-bottom: 10px;
   margin-bottom: 20px;
   border-bottom: 1px solid #e6e6e6;
+  font-size: 18px;
+  font-weight: 600;
 }
 .__left main .__work .__work_cont .__work_wrap .__work_list .test .cont_wrap {
   position: relative;
-  max-height: 400px;
+  max-height: 450px;
   overflow-y: hidden;
   border: 2px solid #F8E6E0;
   cursor: pointer;
