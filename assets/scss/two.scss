@@ -173,10 +173,17 @@ header {
             padding: 300px 0;
             .__fit_title {
                 margin-bottom: 100px;
+                @include mo {
+                    margin-bottom: 60px;
+                }
             }
             .__do_list {
                 padding-top: 150px;
                 position: relative;
+                @include mo {
+                    padding-top: 0px;
+                    padding-bottom: 60px;
+                }
                 &:before {
                     position: absolute;
                     content: "";
@@ -185,21 +192,32 @@ header {
                     width: 100%;
                     height: 1px;
                     background-color: $color-black;
+                    @include mo {
+                        display: none;
+                    }
                 }
                 .flip {
                     display: flex;
                     justify-content: space-evenly;
+                    @include mo {
+                        flex-direction: column;
+                        padding-left: 0;
+                    }
                     .flip_card {
                         transform-style: preserve-3d;
                         perspective: 1000px;
-                        width: 210px;
-                        height: 300px;
+                        width: 206px;
+                        height: 320px;
                         transition: transform 0.7s;
                         position: relative;
                         cursor: pointer;
                         @include tab {
                             width: 136px;
                             height: 270px;
+                        }
+                        @include mo {
+                            width: 100%;
+                            height: 200px;
                         }
                         &:before {
                             position: absolute;
@@ -209,6 +227,9 @@ header {
                             left: 50%;
                             bottom: 100%;
                             background-color: $color-black;
+                            @include mo {
+                               display: none;
+                            }
                         }
                         &:after {
                             position: absolute;
@@ -221,6 +242,9 @@ header {
                             left: 50%;
                             transform: translateX(-50%);
                             background-color: $color-pink;
+                            @include mo {
+                                display: none;
+                            }
                         }
                         .card_inner {
                             position: relative;
@@ -250,6 +274,9 @@ header {
                                 
                                 .gif_wrap {
                                     transform: translateZ(70px) scale(0.85);
+                                    @include mo {
+                                        transform: scale(0.32);
+                                    }
                                     figure {
                                         width: 100%;
                                         height: 100%;
@@ -391,12 +418,25 @@ header {
                     display: flex;
                     justify-content: space-evenly;
                     margin-top: 50px;
+                    @include mo {
+                        flex-direction: column;
+                        margin-top: 0;
+                        display: none;
+                    }
                     .card_title {
-                        width: 210px;
+                        width: 206px;
                         text-align: center;
+                        font-size: 18px;
+                        font-weight: 600;
                         @include tab {
                             width: 136px;
                             font-size: 16px;
+                        }
+                        @include mo {
+                            width: unset;
+                            height: 260px;
+                            display: flex;
+                            align-items: center;
                         }
                     }
                 }
@@ -427,6 +467,9 @@ header {
                 .__port_cont {
                     display: flex;
                     justify-content: space-between;
+                    @include mo {
+                        flex-direction: column;
+                    }
                     .__view_box {
                         width: calc(50% - 30px);
                         display: flex;
@@ -434,6 +477,9 @@ header {
                         justify-content: space-between;
                         @include tab {
                             width: calc(50% - 10px);
+                        }
+                        @include mo {
+                            width: 100%;
                         }
                         .__grey_num {
                             margin-bottom: 30px;
@@ -459,6 +505,9 @@ header {
                         @include tab {
                             width: calc(50% - 10px);
                             padding-top: 15px;
+                        }
+                        @include mo {
+                            width: 100%;
                         }
                         .__desc_title {
                             font-size: 36px;
@@ -498,17 +547,32 @@ header {
             .__work_cont {
                 display: flex;
                 max-width: unset;
+                @include tab {
+                    flex-direction: column;
+                }
                 .__fit_title {
                     padding: 50px 0;
                     width: 160px;
                     border-right: 1px solid rgba($color-e6, 0.8);
                     margin-right: 30px;
                     font-size: 2.6rem;
+                    @include tab {
+                        width: 100%;
+                        border-right: none;
+                        border-bottom: 1px solid rgba($color-e6, 0.8);
+                    }
                 }
                 .__work_wrap {
                     padding: 140px 0;
                     width: calc(100% - 160px);
                     position: relative;
+                    @include tab {
+                        width: 100%;
+                        padding: 80px 0;
+                    }
+                    @include mo {
+                        padding: 60px 0;
+                    }
                     &:before {
                         position: absolute;
                         content: "";
@@ -517,6 +581,12 @@ header {
                         background-color: rgba($color-e6, 0.8);
                         top: 0;
                         left: calc(33% + 3px);
+                        @include tab {
+                            left: 50%
+                        }
+                        @include mo {
+                            display: none;
+                        }
                     }
                     &:after {
                         position: absolute;
@@ -526,6 +596,9 @@ header {
                         background-color: rgba($color-e6, 0.8);
                         top: 0;
                         left: calc(66% + 10px);
+                        @include tab {
+                            display: none;
+                        }
                     }
                     .__work_list {
                         display: flex;
@@ -535,6 +608,12 @@ header {
                             width: calc(33.333% - 30px);
                             margin-bottom: 50px;
                             padding: 10px;
+                            @include tab {
+                                width: calc(50% - 20px);
+                            }
+                            @include mo {
+                                width: calc(100% - 10px);
+                            }
                             .work_title {
                                 padding-bottom: 10px;
                                 margin-bottom: 20px;
